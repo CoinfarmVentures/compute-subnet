@@ -21,7 +21,7 @@ services:
 
     validator:
         pull_policy: if_not_present
-        image: daturaai/compute-subnet-validator:latest
+        image: daturaai/compute-subnet-validator:local
         build:
             context: .
         env_file: ./.env
