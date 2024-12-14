@@ -1,6 +1,6 @@
 #!/bin/bash
 set -eux -o pipefail
-TAG=latest
+TAG=local
 
 IMAGE_NAME="daturaai/compute-subnet-validator-runner:$TAG"
 
