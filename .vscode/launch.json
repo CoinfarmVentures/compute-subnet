@@ -39,6 +39,7 @@
 			"cwd": "${workspaceFolder}/neurons/validators"
 		},
 		{
+			"type": "debugpy",
 			"name": "Python: Remote Attach (Validator)",
 			"request": "attach",
 			"connect": {
@@ -48,7 +49,7 @@
 			"pathMappings": [
 				{
 					"localRoot": "${workspaceFolder}",
-					"remoteRoot": "/root/app"
+					"remoteRoot": "/root/app/neurons/validators"
 				}
 			]
 		}
