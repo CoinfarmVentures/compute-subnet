@@ -2,6 +2,7 @@ version: "3.7"
 
 services:
     validator-runner:
+        pull_policy: never
         image: daturaai/compute-subnet-validator-runner:local
         #build:
         #    context: .
