@@ -45,7 +45,8 @@ class Validator:
         subtensor = self.get_subtensor()
 
         # check registered
-        self.check_registered(subtensor)
+        #self.check_registered(subtensor)
+        bittensor.logging.info(f"[Coinfarm] Skipped check_registered")
 
         loop = asyncio.get_event_loop()
         loop.run_until_complete(self.initiate_services(subtensor))
