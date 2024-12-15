@@ -7,6 +7,10 @@ services:
         #    context: .
         image: CoinfarmVentures/compute-subnet-miner-runner:local
         restart: unless-stopped
+        ports:
+            - 5679:5679
+        expose:
+            - 5679
         volumes:
             - /var/run/docker.sock:/var/run/docker.sock
             - "$HOME/.bittensor/wallets:/root/.bittensor/wallets"
