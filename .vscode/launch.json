@@ -48,10 +48,11 @@
 			},
 			"pathMappings": [
 				{
-					"localRoot": "${workspaceFolder}",
-					"remoteRoot": "/root/app/neurons/validators"
+					"localRoot": "${workspaceFolder}/neurons/validators",
+					"remoteRoot": "/root/app"
 				}
-			]
+			],
+			"logToFile": true
 		}
 	]
 }
