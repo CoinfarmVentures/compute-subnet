@@ -18,6 +18,9 @@ services:
             - db_data:/var/lib/postgresql/data
 
     miner:
+        pull_policy: never
+        build:
+            context: .
         image: CoinfarmVentures/compute-subnet-miner:local
         env_file: ./.env
         ports:

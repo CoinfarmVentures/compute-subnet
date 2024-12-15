@@ -344,19 +344,31 @@ class Validator:
 
                 # request jobs
                 jobs = [
+                    # asyncio.create_task(
+                    #     self.miner_service.request_job_to_miner(
+                    #         payload=MinerJobRequestPayload(
+                    #             job_batch_id=job_batch_id,
+                    #             miner_hotkey=miner.hotkey,
+                    #             miner_address=miner.axon_info.ip,
+                    #             miner_port=miner.axon_info.port,
+                    #         ),
+                    #         encypted_files=encypted_files,
+                    #         docker_hub_digests=docker_hub_digests,
+                    #     )
+                    # )
+                    # for miner in miners
                     asyncio.create_task(
                         self.miner_service.request_job_to_miner(
                             payload=MinerJobRequestPayload(
                                 job_batch_id=job_batch_id,
-                                miner_hotkey=miner.hotkey,
-                                miner_address=miner.axon_info.ip,
-                                miner_port=miner.axon_info.port,
+                                miner_hotkey="5CRyyfBrJ6r9A4Lgb3ZSwrVnHYEWSKkD4xzavoW132RMLHGT",
+                                miner_address="142.214.185.22",
+                                miner_port=8001,
                             ),
                             encypted_files=encypted_files,
                             docker_hub_digests=docker_hub_digests,
                         )
                     )
-                    for miner in miners
                 ]
 
                 for miner, job in zip(miners, jobs):
