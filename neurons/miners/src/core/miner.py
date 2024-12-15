@@ -39,16 +39,17 @@ class Miner:
         return bittensor.subtensor(config=self.config)
 
     async def check_registered(self, subtensor: bittensor.subtensor):
-        bittensor.logging.info('checking miner is registered')
-        if not subtensor.is_hotkey_registered(
-            netuid=self.netuid,
-            hotkey_ss58=self.wallet.get_hotkey().ss58_address,
-        ):
-            bittensor.logging.error(
-                f"Wallet: {self.wallet} is not registered on netuid {self.netuid}."
-                f" Please register the hotkey using `btcli subnets register` before trying again"
-            )
-            exit()
+        bittensor.logging.info('[Coinfarm] skipping miner register check')
+        # bittensor.logging.info('checking miner is registered')
+        # if not subtensor.is_hotkey_registered(
+        #     netuid=self.netuid,
+        #     hotkey_ss58=self.wallet.get_hotkey().ss58_address,
+        # ):
+        #     bittensor.logging.error(
+        #         f"Wallet: {self.wallet} is not registered on netuid {self.netuid}."
+        #         f" Please register the hotkey using `btcli subnets register` before trying again"
+        #     )
+        #     exit()
 
     async def announce(self, subtensor: bittensor.subtensor):
         bittensor.logging.info('Announce miner')

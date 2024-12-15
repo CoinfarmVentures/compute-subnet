@@ -53,6 +53,22 @@
 				}
 			],
 			"logToFile": true
+		},
+		{
+			"type": "debugpy",
+			"name": "Python: Remote Attach (Miner)",
+			"request": "attach",
+			"connect": {
+				"host": "142.214.185.22",
+				"port": 6678
+			},
+			"pathMappings": [
+				{
+					"localRoot": "${workspaceFolder}/neurons/miners",
+					"remoteRoot": "/root/app"
+				}
+			],
+			"logToFile": true
 		}
 	]
 }

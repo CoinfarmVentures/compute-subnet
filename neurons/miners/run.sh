@@ -4,4 +4,4 @@
 alembic upgrade head
 
 # run fastapi app
-python src/miner.py
+python -m debugpy --listen 0.0.0.0:6678 --log-to /tmp/debugpy.log --wait-for-client src/miner.py
