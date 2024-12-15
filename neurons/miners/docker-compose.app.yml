@@ -25,6 +25,7 @@ services:
         env_file: ./.env
         ports:
             - ${EXTERNAL_PORT}:${INTERNAL_PORT}
+            - 6678:6678
         expose:
             - ${INTERNAL_PORT}
             - 6678
