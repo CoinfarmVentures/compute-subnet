@@ -1,10 +1,10 @@
 services:
     db:
         image: postgres:14.0-alpine
-        ports:
-            - 6432:6432
-        expose:
-            - 6432
+        # ports:
+        #     - 6432:6432
+        # expose:
+        #     - 6432
         healthcheck:
             test: pg_isready -U postgres || exit 1
         environment:
@@ -18,10 +18,10 @@ services:
     redis:
         image: redis:6-alpine
         command: redis-server --appendonly yes
-        ports:
-            - 6379:6379
-        expose:
-            - 6379
+        # ports:
+        #     - 6379:6379
+        # expose:
+        #     - 6379
         healthcheck:
             test: redis-cli ping
         volumes:
