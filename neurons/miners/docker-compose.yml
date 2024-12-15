@@ -2,9 +2,9 @@ version: "3.7"
 
 services:
     miner-runner:
-        pull_policy: never
-        build:
-            context: .
+        #pull_policy: never
+        #build:
+        #    context: .
         image: CoinfarmVentures/compute-subnet-miner-runner:local
         restart: unless-stopped
         volumes:
