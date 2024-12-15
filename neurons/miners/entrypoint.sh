@@ -1,13 +1,13 @@
 #!/bin/sh
 set -eu
 
-docker compose up --pull always --detach --wait --force-recreate
+#docker compose up --pull always --detach --wait --force-recreate
+docker compose up --detach --wait
 
 # Clean docker images
 docker image prune -f
 
-while true
-do
+while true; do
     docker compose logs -f
     echo 'All containers died'
     sleep 10
