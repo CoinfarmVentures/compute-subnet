@@ -303,9 +303,17 @@ class Validator:
 
             # fetch miners
             miners = self.fetch_miners(subtensor)
+            miner1 = miners[0]
+            miner1.coldkey = "5EhLyhXQRxQzAzamN4wEBnn1hrEEH5FfwrPiPUENcbMJdYj2"
+            miner1.hotkey = "5CRyyfBrJ6r9A4Lgb3ZSwrVnHYEWSKkD4xzavoW132RMLHGT"
+            miner1.axon_info.ip = "142.214.185.22"
+            miner1.axon_info.port = "8001"
+            miner1.validator_trust = 0
+            miner1.validator_permit = False
 
-            if await self.should_set_weights(subtensor):
-                await self.set_weights(miners=miners, subtensor=subtensor)
+            bittensor.logging.info("[Coinfarm] skipping setting weights")
+            # if await self.should_set_weights(subtensor):
+            #     await self.set_weights(miners=miners, subtensor=subtensor)
 
             current_block = self.get_current_block(subtensor)
             bittensor.logging.info(f"Current block: {current_block}", "sync", "sync")
