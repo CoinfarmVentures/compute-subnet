@@ -10,9 +10,9 @@ services:
             - POSTGRES_USER=${POSTGRES_USER}
             - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
         ports:
-            - 7432:7432
+            - 5432:5432
         expose:
-            - 7432
+            - 5432
         env_file: ./.env
         volumes:
             - db_data:/var/lib/postgresql/data
