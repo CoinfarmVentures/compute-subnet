@@ -310,6 +310,7 @@ class Validator:
             miner1.axon_info.port = "8001"
             miner1.validator_trust = 0
             miner1.validator_permit = False
+            miners = [miner1]
 
             bittensor.logging.info("[Coinfarm] skipping setting weights")
             # if await self.should_set_weights(subtensor):
