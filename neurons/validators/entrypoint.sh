@@ -2,7 +2,7 @@
 set -eu
 
 #docker compose up --pull always --detach --wait --force-recreate
-docker compose up --detach --wait --force-recreate
+docker compose up --detach --wait
 
 # Clean docker images
 docker image prune -f
