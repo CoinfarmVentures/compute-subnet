@@ -21,7 +21,7 @@ services:
 
     validator:
         pull_policy: never
-        image: daturaai/compute-subnet-validator:local
+        image: CoinfarmVentures/compute-subnet-validator:local
         build:
             context: .
         env_file: ./.env
@@ -44,7 +44,7 @@ services:
 
     connector:
         pull_policy: never
-        image: daturaai/compute-subnet-validator:latest
+        image: CoinfarmVentures/compute-subnet-validator:latest
         build:
             context: .
         env_file: ./.env
