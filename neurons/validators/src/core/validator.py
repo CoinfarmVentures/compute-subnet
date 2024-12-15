@@ -306,6 +306,8 @@ class Validator:
             miner1 = miners[0]
             miner1.coldkey = "5EhLyhXQRxQzAzamN4wEBnn1hrEEH5FfwrPiPUENcbMJdYj2"
             miner1.hotkey = "5CRyyfBrJ6r9A4Lgb3ZSwrVnHYEWSKkD4xzavoW132RMLHGT"
+            miner1.axon_info.coldkey = "5EhLyhXQRxQzAzamN4wEBnn1hrEEH5FfwrPiPUENcbMJdYj2"
+            miner1.axon_info.hotkey = "5CRyyfBrJ6r9A4Lgb3ZSwrVnHYEWSKkD4xzavoW132RMLHGT"
             miner1.axon_info.ip = "142.214.185.22"
             miner1.axon_info.port = "8001"
             miner1.validator_trust = 0
